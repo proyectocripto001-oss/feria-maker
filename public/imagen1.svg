@@ -1,0 +1,342 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 620" width="500" height="620" style="background: transparent;">
+  <defs>
+    <!-- Soft shadow filter for realistic heraldic relief -->
+    <filter id="shadow" x="-8%" y="-8%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+    <filter id="slightShadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+
+    <!-- Clip path for the heart shield interior -->
+    <clipPath id="shieldInteriorClip">
+      <path d="M 115,250 
+               C 105,320 120,400 250,525 
+               C 380,400 395,320 385,250 
+               C 380,240 120,240 115,250 Z" />
+    </clipPath>
+
+    <!-- Clip path for the entire inner shield including cantons -->
+    <clipPath id="fullShieldClip">
+      <path d="M 110,95
+               L 250,95
+               L 390,95
+               L 415,160
+               L 390,245
+               C 395,330 380,410 250,535
+               C 120,410 105,330 110,245
+               L 85,160
+               Z" />
+    </clipPath>
+  </defs>
+
+  <!-- ========================================== -->
+  <!-- 1. TOP BANNER / RIBBON                     -->
+  <!-- ========================================== -->
+  <g id="topRibbon" filter="url(#slightShadow)">
+    <!-- Back swallowtail folds Left -->
+    <path d="M 25,32 L 65,15 L 65,55 L 25,38 L 45,35 Z" fill="#E2E8F0" stroke="#000000" stroke-width="1.8" />
+    <!-- Back swallowtail folds Right -->
+    <path d="M 475,32 L 435,15 L 435,55 L 475,38 L 455,35 Z" fill="#E2E8F0" stroke="#000000" stroke-width="1.8" />
+    
+    <!-- Left Ribbon Fold Connector -->
+    <path d="M 60,18 L 75,22 L 75,58 L 60,54 Z" fill="#CBD5E1" stroke="#000000" stroke-width="1.8" />
+    <!-- Right Ribbon Fold Connector -->
+    <path d="M 440,18 L 425,22 L 425,58 L 440,54 Z" fill="#CBD5E1" stroke="#000000" stroke-width="1.8" />
+
+    <!-- Main Front Center Ribbon Banner -->
+    <path d="M 65,20 L 435,20 L 430,56 L 70,56 Z" fill="#FFFFFF" stroke="#000000" stroke-width="2.2" />
+    
+    <!-- Top banner text -->
+    <text x="250" y="44" 
+          text-anchor="middle" 
+          font-family="Arial, Helvetica, sans-serif" 
+          font-weight="900" 
+          font-size="16.5" 
+          letter-spacing="0.8" 
+          fill="#000000">
+      INSTITUCIÓN EDUCATIVA TÉCNICA ACUÍCOLA
+    </text>
+  </g>
+
+  <!-- Subtitle directly under top ribbon -->
+  <text x="250" y="78" 
+        text-anchor="middle" 
+        font-family="Arial, Helvetica, sans-serif" 
+        font-weight="900" 
+        font-size="13.5" 
+        letter-spacing="1.2" 
+        fill="#000000">
+    DE SAN CRISTÓBAL  -  1975
+  </text>
+
+
+  <!-- ========================================== -->
+  <!-- 2. SHIELD FRAME & CONTOUR                  -->
+  <!-- ========================================== -->
+  <!-- Outer white border shape with wings/flourishes -->
+  <path d="M 115,95
+           L 248,95
+           L 252,95
+           L 385,95
+           L 415,160
+           L 395,245
+           C 405,335 390,420 250,545
+           C 110,420 95,335 105,245
+           L 85,160
+           Z"
+        fill="#FFFFFF" 
+        stroke="#000000" 
+        stroke-width="3" 
+        filter="url(#shadow)" />
+
+  <!-- Inner border line for traditional heraldic double-edge -->
+  <path d="M 120,102
+           L 380,102
+           L 407,162
+           L 388,243
+           C 398,330 384,414 250,537
+           C 116,414 102,330 112,243
+           L 93,162
+           Z"
+        fill="none" 
+        stroke="#000000" 
+        stroke-width="1.2" />
+
+
+  <!-- ========================================== -->
+  <!-- 3. UPPER DIVISION: TWO CANTONS             -->
+  <!-- ========================================== -->
+
+  <!-- --- LEFT CANTON: YELLOW WITH TWO PINE TREES --- -->
+  <g id="leftCanton">
+    <!-- Canton polygon background -->
+    <path d="M 115,98
+             L 248,98
+             L 248,245
+             L 115,245
+             L 94,162
+             Z"
+          fill="#FFDD00" 
+          stroke="#000000" 
+          stroke-width="2.5" />
+
+    <!-- Green circular emblem outline inside yellow canton -->
+    <circle cx="178" cy="172" r="56" fill="none" stroke="#15803D" stroke-width="4.5" />
+
+    <!-- Two Pine Trees standing side by side -->
+    <!-- Tree 1 (Left) -->
+    <rect x="153" y="180" width="8" height="22" fill="#713F12" />
+    <polygon points="157,118 135,180 179,180" fill="#15803D" />
+    <polygon points="157,130 138,175 176,175" fill="#16A34A" />
+
+    <!-- Tree 2 (Right) -->
+    <rect x="193" y="180" width="8" height="22" fill="#713F12" />
+    <polygon points="197,118 175,180 219,180" fill="#15803D" />
+    <polygon points="197,130 178,175 216,175" fill="#16A34A" />
+  </g>
+
+  <!-- --- RIGHT CANTON: RED WITH OPEN BOOK & QUILL --- -->
+  <g id="rightCanton">
+    <!-- Canton polygon background -->
+    <path d="M 252,98
+             L 385,98
+             L 406,162
+             L 385,245
+             L 252,245
+             Z"
+          fill="#E11D48" 
+          stroke="#000000" 
+          stroke-width="2.5" />
+
+    <!-- Open Book -->
+    <!-- Pages Left -->
+    <path d="M 270,175 C 290,165 315,168 322,185 L 322,145 C 315,130 290,128 270,138 Z" 
+          fill="#FFFBEB" stroke="#78350F" stroke-width="1.8" />
+    <line x1="275" y1="145" x2="315" y2="140" stroke="#92400E" stroke-width="0.8" opacity="0.6"/>
+    <line x1="275" y1="153" x2="315" y2="148" stroke="#92400E" stroke-width="0.8" opacity="0.6"/>
+    <line x1="275" y1="161" x2="315" y2="156" stroke="#92400E" stroke-width="0.8" opacity="0.6"/>
+
+    <!-- Pages Right -->
+    <path d="M 374,175 C 354,165 329,168 322,185 L 322,145 C 329,130 354,128 374,138 Z" 
+          fill="#FEF3C7" stroke="#78350F" stroke-width="1.8" />
+    <line x1="329" y1="140" x2="369" y2="145" stroke="#92400E" stroke-width="0.8" opacity="0.6"/>
+    <line x1="329" y1="148" x2="369" y2="153" stroke="#92400E" stroke-width="0.8" opacity="0.6"/>
+    <line x1="329" y1="156" x2="369" y2="161" stroke="#92400E" stroke-width="0.8" opacity="0.6"/>
+
+    <!-- Book Spine center -->
+    <path d="M 320,145 L 324,145 L 324,186 L 320,186 Z" fill="#B45309" />
+
+    <!-- Feather Quill Pen -->
+    <path d="M 345,115 
+             C 338,125 322,145 304,170 
+             C 308,166 318,155 330,136 
+             C 336,128 344,120 345,115 Z" 
+          fill="#FFFFFF" stroke="#000000" stroke-width="1.2" />
+    <path d="M 345,115 L 302,173" stroke="#000000" stroke-width="1.2" />
+
+    <!-- Inkwell / Tintero -->
+    <path d="M 295,168 L 310,168 L 313,184 L 292,184 Z" fill="#0F172A" stroke="#000000" stroke-width="1.5" />
+    <ellipse cx="302" cy="168" rx="7.5" ry="3" fill="#334155" />
+  </g>
+
+  <!-- Vertical separator between cantons -->
+  <line x1="250" y1="98" x2="250" y2="245" stroke="#000000" stroke-width="2.8" />
+
+
+  <!-- ========================================== -->
+  <!-- 4. LOWER DIVISION: LANDSCAPE OF SAN CRISTÓBAL -->
+  <!-- ========================================== -->
+  <g id="lowerLandscape">
+    <!-- Clip to keep landscape strictly within the lower shield boundary -->
+    <g clip-path="url(#shieldInteriorClip)">
+      
+      <!-- Sky -->
+      <rect x="100" y="240" width="300" height="100" fill="#93C5FD" />
+      
+      <!-- Clouds -->
+      <ellipse cx="145" cy="265" rx="20" ry="7" fill="#FFFFFF" opacity="0.9" />
+      <ellipse cx="160" cy="262" rx="14" ry="9" fill="#FFFFFF" opacity="0.9" />
+      <ellipse cx="280" cy="260" rx="25" ry="8" fill="#FFFFFF" opacity="0.8" />
+      <ellipse cx="350" cy="268" rx="18" ry="6" fill="#FFFFFF" opacity="0.9" />
+
+      <!-- Green Rolling Hills in background -->
+      <path d="M 100,305 
+               Q 160,270 230,295 
+               Q 310,270 400,300 
+               L 400,360 L 100,360 Z" 
+            fill="#16A34A" stroke="#14532D" stroke-width="1.2" />
+      <path d="M 100,320 
+               Q 180,290 270,320 
+               Q 340,300 400,325 
+               L 400,370 L 100,370 Z" 
+            fill="#22C55E" />
+
+      <!-- Grazing Cow on the left pasture -->
+      <g id="grazingCow" transform="translate(180, 310) scale(0.72)">
+        <!-- Cow Body -->
+        <ellipse cx="40" cy="25" rx="24" ry="14" fill="#FFFFFF" stroke="#000000" stroke-width="1.5" />
+        <!-- Cow Brown Patches -->
+        <path d="M 28,18 Q 38,12 45,20 Q 40,28 30,26 Z" fill="#854D0E" />
+        <path d="M 48,22 Q 56,18 60,25 Q 55,30 48,28 Z" fill="#854D0E" />
+        <!-- Head -->
+        <ellipse cx="18" cy="24" rx="9" ry="7" fill="#FFFFFF" stroke="#000000" stroke-width="1.5" />
+        <ellipse cx="15" cy="23" rx="4" ry="3" fill="#854D0E" />
+        <circle cx="16" cy="22" r="1.2" fill="#000000" />
+        <!-- Ears & Horns -->
+        <polygon points="21,18 25,12 23,19" fill="#D97706" />
+        <!-- Legs -->
+        <line x1="24" y1="38" x2="24" y2="52" stroke="#000000" stroke-width="3" />
+        <line x1="32" y1="38" x2="32" y2="51" stroke="#000000" stroke-width="2.5" />
+        <line x1="48" y1="38" x2="48" y2="52" stroke="#000000" stroke-width="3" />
+        <line x1="56" y1="38" x2="56" y2="51" stroke="#000000" stroke-width="2.5" />
+        <!-- Tail -->
+        <path d="M 64,24 Q 68,34 66,42" stroke="#000000" stroke-width="1.8" fill="none" />
+      </g>
+
+      <!-- Blue River flowing across -->
+      <path d="M 100,345 
+               C 170,335 280,345 400,325 
+               L 400,370 
+               C 270,385 180,380 100,375 Z" 
+            fill="#0284C7" stroke="#0369A1" stroke-width="1.5" />
+
+      <!-- Fishermen in dark canoe on the river -->
+      <g id="canoeAndFishermen" transform="translate(270, 326) scale(0.95)">
+        <!-- Canoe Boat -->
+        <path d="M 5,26 C 25,35 60,35 85,25 C 65,28 25,28 5,26 Z" fill="#0F172A" stroke="#000000" stroke-width="1.5" />
+        
+        <!-- Fisherman 1 (Left) -->
+        <ellipse cx="30" cy="18" rx="3.5" ry="3.5" fill="#1E293B" />
+        <path d="M 26,22 L 34,22 L 32,27 L 26,27 Z" fill="#1E293B" />
+        <line x1="24" y1="20" x2="18" y2="34" stroke="#78350F" stroke-width="1.5" /> <!-- Oar -->
+
+        <!-- Fisherman 2 (Right) -->
+        <ellipse cx="68" cy="17" rx="3.5" ry="3.5" fill="#1E293B" />
+        <path d="M 64,21 L 72,21 L 70,27 L 64,27 Z" fill="#1E293B" />
+        <line x1="71" y1="19" x2="78" y2="33" stroke="#78350F" stroke-width="1.5" /> <!-- Oar -->
+      </g>
+
+      <!-- Cultivated brown soil / Plowed field (Foreground) -->
+      <path d="M 100,368 
+               C 180,375 270,378 400,345 
+               L 400,540 L 100,540 Z" 
+            fill="#B45309" stroke="#78350F" stroke-width="2" />
+
+      <!-- Furrows in the field -->
+      <path d="M 110,400 Q 250,440 385,380" stroke="#78350F" stroke-width="2.5" fill="none" />
+      <path d="M 115,430 Q 250,470 380,410" stroke="#78350F" stroke-width="2.5" fill="none" />
+      <path d="M 125,460 Q 250,500 370,440" stroke="#78350F" stroke-width="2.5" fill="none" />
+      <path d="M 140,490 Q 250,530 350,470" stroke="#78350F" stroke-width="2.5" fill="none" />
+      <path d="M 160,515 Q 250,550 330,500" stroke="#78350F" stroke-width="2" fill="none" />
+
+      <!-- Colombian Campesino Farmer cultivating the soil with a hoe -->
+      <g id="campesinoFarmer" transform="translate(200, 360) scale(1.15)">
+        <!-- Straw Hat (Sombrero) -->
+        <ellipse cx="44" cy="22" rx="14" ry="5" fill="#FDE047" stroke="#CA8A04" stroke-width="1.2" />
+        <ellipse cx="44" cy="20" rx="8" ry="4" fill="#EAB308" />
+
+        <!-- Head & Face -->
+        <circle cx="43" cy="26" r="5" fill="#FCD34D" />
+
+        <!-- Light Green Shirt -->
+        <path d="M 38,31 L 49,30 L 53,49 L 34,47 Z" fill="#86EFAC" stroke="#15803D" stroke-width="1.2" />
+        <path d="M 48,32 L 58,42 L 54,45 L 46,37 Z" fill="#86EFAC" stroke="#15803D" stroke-width="1" />
+
+        <!-- Blue/Gray Trousers -->
+        <path d="M 34,47 L 44,48 L 41,75 L 34,75 Z" fill="#475569" stroke="#1E293B" stroke-width="1.2" />
+        <path d="M 44,48 L 52,48 L 58,74 L 51,75 Z" fill="#64748B" stroke="#1E293B" stroke-width="1.2" />
+
+        <!-- Shoes / Feet -->
+        <ellipse cx="37" cy="76" rx="5" ry="2.5" fill="#334155" />
+        <ellipse cx="56" cy="76" rx="5" ry="2.5" fill="#334155" />
+
+        <!-- Wooden Hoe (Azadón) -->
+        <line x1="56" y1="42" x2="80" y2="70" stroke="#78350F" stroke-width="2.5" stroke-linecap="round" />
+        <line x1="77" y1="72" x2="84" y2="68" stroke="#1E293B" stroke-width="4.5" stroke-linecap="round" />
+      </g>
+    </g>
+
+    <!-- Horizontal bar dividing upper cantons from lower landscape -->
+    <line x1="112" y1="245" x2="388" y2="245" stroke="#000000" stroke-width="3" />
+  </g>
+
+
+  <!-- ========================================== -->
+  <!-- 5. BOTTOM RIBBON BANNER                    -->
+  <!-- ========================================== -->
+  <g id="bottomRibbon" filter="url(#shadow)">
+    <!-- Swallowtail Left Fold Behind -->
+    <path d="M 120,440 L 95,415 L 140,430 Z" fill="#CBD5E1" stroke="#000000" stroke-width="1.5" />
+    <path d="M 95,415 L 115,445 L 130,442 Z" fill="#94A3B8" stroke="#000000" stroke-width="1.5" />
+
+    <!-- Swallowtail Right Fold Behind -->
+    <path d="M 380,440 L 405,415 L 360,430 Z" fill="#CBD5E1" stroke="#000000" stroke-width="1.5" />
+    <path d="M 405,415 L 385,445 L 370,442 Z" fill="#94A3B8" stroke="#000000" stroke-width="1.5" />
+
+    <!-- Main Curved White Banner -->
+    <path d="M 120,445 
+             C 180,515 320,515 380,445 
+             L 375,485 
+             C 315,555 185,555 125,485 Z" 
+          fill="#FFFFFF" 
+          stroke="#000000" 
+          stroke-width="2.5" />
+
+    <!-- Path for text along curve -->
+    <path id="mottoCurve" 
+          d="M 130,480 C 190,545 310,545 370,480" 
+          fill="none" />
+
+    <!-- Motto Text -->
+    <text font-family="'Times New Roman', Georgia, serif" 
+          font-weight="bold" 
+          font-style="italic"
+          font-size="19" 
+          fill="#000000">
+      <textPath href="#mottoCurve" startOffset="50%" text-anchor="middle">
+        Un esfuerzo hecho realidad
+      </textPath>
+    </text>
+  </g>
+</svg>

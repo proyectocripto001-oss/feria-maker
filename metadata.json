@@ -1,0 +1,6 @@
+{
+  "name": "Feria Maker - I.E. Técnica Acuícola",
+  "description": "Página oficial de la Feria Maker de la Institución Educativa Técnica Acuícola de San Cristóbal, Bolívar. Innovación, robótica, acuicultura y enfoque STEAM+ con contador regresivo en vivo.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
