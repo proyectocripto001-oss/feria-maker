@@ -31,7 +31,7 @@ export const EVENT_INFO = {
     department: "Bolívar, Colombia",
     address: "Calle del Saber, Sector Centro - San Cristóbal, Bolívar",
     reference: "A orillas del Canal del Dique / zona acuícola",
-    googleMapsSearchUrl: "https://www.google.com/maps/search/San+Cristobal+Bolivar+Colombia",
+    googleMapsSearchUrl: "https://maps.app.goo.gl/qH659CXNJwJowM2G9",
   },
 
   pillars: [
